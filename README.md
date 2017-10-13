@@ -43,6 +43,10 @@ Below will be how to set the app up, build in it, work with github, and future i
    
    The server repo holds all of our endpoints and all of our logic if we can help it (Electron is already using enough resources, so no need to push it). 
    
+   We start in `start.js` where we instantiate our `WebApi` class passing in `express()` and our port. We then invoke a public method in the class `api.run()` which will start the server and listen on the port we gave it. 
+
+  From there we move into `application.ts` where we construct the `WebApi` class. Here we first import all of our npm packages and controllers before we get to the class. The class will contain a `constructor(){}` function that will be invoked as soon as the class is instantiated
+   
    ## GUI Repo
    
    
