@@ -1,3 +1,27 @@
+# Table of Contents
+
+[About the Project](https://github.com/TheTimeCo-op/README/blob/master/README.md#about-the-application)
+
+[Set Up](https://github.com/TheTimeCo-op/README/blob/master/README.md#set-up)
+
+ - [Setting Up the Database](https://github.com/TheTimeCo-op/README/blob/master/README.md#setting-up-the-database)
+ 
+ - [Setting Up the Application](https://github.com/TheTimeCo-op/README/blob/master/README.md#setting-up-the-application)
+ 
+[A Walk Through](https://github.com/TheTimeCo-op/README/blob/master/README.md#a-walk-through)
+
+ - [Server Repo](https://github.com/TheTimeCo-op/README/blob/master/README.md#server-repo)
+ 
+ - [GUI Repo](https://github.com/TheTimeCo-op/README/blob/master/README.md#gui-repo)
+ 
+[Creating A Component](https://github.com/TheTimeCo-op/README/blob/master/README.md#creating-a-component)
+
+[Adding to the js_Library](https://github.com/TheTimeCo-op/README/blob/master/README.md#adding-to-the-js_Library)
+
+[Work Flow](https://github.com/TheTimeCo-op/README/blob/master/README.md#work-flow)
+
+[Future Ideas](https://github.com/TheTimeCo-op/README/blob/master/README.md#future-ideas)
+
 # About the Project
 
   We need a name for the app! Anyway, here's the problem. I use tSheets everyday to track my time for work, and it's great, except it doesn't keep a running total of the hours each week for each job. So I find myself Friday afternoon spending half and hour adding up all the time I worked on each project. Now we have [Project Name Here]! 
@@ -18,7 +42,9 @@ Below will be how to set the app up, build in it, work with github, and future i
    The app uses postgres as the database, which I personally love! It's a very reliable, elegant, sexy...And I think it's actually more popular than mySQL. 
  
    [Install Postgres on Mac](https://www.postgresql.org/download/macosx/)
+   
    [Install Postgres on Windows](https://www.postgresql.org/download/windows/)
+   
    [Install Postgres on Linux](https://www.postgresql.org/download/)
     
    For my postgres GUI I prefer pgAdmin. 
