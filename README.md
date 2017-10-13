@@ -91,12 +91,26 @@ Below will be how to set the app up, build in it, work with github, and future i
    
    The renderer.js file is where we come in! This is the entry point for the app. Here we require in all of our javascript files and components. We also instantiate our component classes and do anything else that directly impacts the index.html file. 
    
+   The Components folder holds all of the components. As I'm writing this there are two components `JobsCardComponent` and `JobsComponent`. In the next section I'll explain how to create a component, but it's pretty much just an ES6 class. It's best to think of the app in terms of components (or pieces that fit together). For example the `JobsCardComponent` contains the html to display the Job name and the clock in and clock out button, and the `JobsComponent` is the component that gives the `JobsCardComponent` a space to live. If we wanted to add more info to the Jobs card then we would just add to the Jobs card, or if need be we would add another component. If we wanted to add a 'Add Jobs' screen (which we do) then we would create a separte component for that. This `AddJobsComponent` we'll call it will replace the html in `<div id="main"></div>` in the `index.html` with the html in it's render function. When we want to go back to our jobs card then we'll replace the html in `<div id="main"></div>` with the `JobsComponent` html. 
    
+   In the assest folder we have our style sheets and js_Library. The style sheets are pretty self-explainitory. The app uses Materialize CSS. The js_Library is where we story all of our helper functions for the GUI. Here we have eventHandlers, serverCalls, and utilities. Event handlers are similar to jQuery handlers that I wrote to make interacting with the DOM a little easier, they're pretty straight-forward and are working, so no need to mess with them, unless you're adding more! The server calls are for our GET, POST, and PUT methods. And finally utilies are for various things that will be used a lot and may be easier having a method for it. **NOTE:** If you find yourself writing something twice then it might be a good idea to turn it into a function - maybe throw it in utilies or eventHandlers depending on it's functionality.
    
 
 # Creating a Component
 
-  Stuff!!!
+  Creating a component is super easy if you follow this guide! 
+  
+  1. We start by defining a class, for example `class JobsComponent {}` Note it's common practice to capitalize the first letter of a class. 
+  
+  2. Then we have our constructor function. This will take in the objects that hold our methods, i.e. `http` for serverCalls, `util` for utilities, `$` for eventHandlers, and `moment` for moment.js - it's best to only pull in what you need. Then in the body of the function we define our variables. So the final function will look like this: 
+  ```
+    constructor(http, util, $, moment) {
+    this.http = http;
+    this.util = util;
+    this.$ = $;
+    this.moment = moment;
+  }
+  ```
 
 # Adding to the js_Library
 
