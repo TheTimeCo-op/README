@@ -73,9 +73,24 @@ Below will be how to set the app up, build in it, work with github, and future i
    
    We start in `start.js` where we instantiate our `WebApi` class passing in `express()` and our port. We then invoke a public method in the class `api.run()` which will start the server and listen on the port we gave it. 
 
-  From there we move into `application.ts` where we construct the `WebApi` class. Here we first import all of our npm packages and controllers before we get to the class. The class will contain a `constructor(){}` function that will be invoked as soon as the class is instantiated (essentially it's the first function called). 
+  From there we move into `application.ts` where we construct the `WebApi` class. Here we first import all of our npm packages and controllers before we get to the class. The class will contain a `constructor(){}` function that will be invoked as soon as the class is instantiated (essentially it's the first function called). In there we put our two private methods `this.configureMiddleware(app)` and `this.configureRoutes(app)` passing in our app instance. 
+
+  The middleware is just our bodyparser and database connection stuff, and our routes are (surprise, surprise) our routes. We use `express.Router` because it's cleaner in my opinion. Currently there are only two routes, the time tracking functionality and the add jobs functionality. Anything that does not pertain to either of these will need it's own route i.e authentication, client stuff (if we get into that)
+  
+  The controllers are set up very similar as to avoid confusion (PLEASE FOLLOW THE ESTABLISHED PATTERN). We start with our imports, then go into our configuration, and then into our functions. If needed there's a section for helper functions, if you find yourself doing a certain thing twice, then it's best to pull it out into it's own function - you'll put that function in the Helper Functions section of the file. And finally at the end we have our routes, and export the router. 
+
+  If you're unfamiliar with typescript, then I feel bad for you, because you're really missing out. Please learn more about it here: [Typescript!](https://www.typescriptlang.org/). In the `typeDefinitions` folder we have all of our interfaces, which is basically where we explain what the different object will look like. When you name an interface, it's common convention to start the name with a capital I like so: `IError` or `IJobsRawData`. These are exported, then imported (`import * as types from '../typeDefinitions/types';`) where we want them and called via `types.IJobsRawData`. PLEASE avoid using the `any` type if possible. If you everything an `any` type then that kind of defeats the purpose of using 'TYPE'script. 
    
    ## GUI Repo
+   
+   The GUI repo holds our actual application. It's a desktop app built with Electron. Electron uses nodejs and chromium to built the app, so people like us can come along, throw some HTML, CSS, and Javascript into a file, open it with Electron and call it a desktop app. Once you have run `npm i` which installs electron you can open it by running `npm start`. 
+
+   In the repo you'll notice one html file and a ton of javascript files. That index file is our main html, and all the javascript does is add/remove html from it as the user clicks around. At the bottom of the file will be our script which is `bundle.js` this is a bundle file that contains all of our javascript, (it's build by running `npm run webpack` and should be built every time you want to test your change) when the project is nearing the end, we'll minify this file. So, no development should be happening here! 
+
+   The main.js file essentially tells Electron what to do i.e. how to close, how big to make the window on start-up, where to pull the main html file from. Unless you're doing stuff that pertains to electrons interaction with our app, you don't need to mess with anything here.
+   
+   The renderer.js file is where we come in! This is the entry point for the app. Here we require in all of our javascript files and components. We also instantiate our component classes and do anything else that directly impacts the index.html file. 
+   
    
    
 
