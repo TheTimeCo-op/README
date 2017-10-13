@@ -22,6 +22,8 @@
 
 [Future Ideas](https://github.com/TheTimeCo-op/README/blob/master/README.md#future-ideas)
 
+[RULES!!!](https://github.com/TheTimeCo-op/README/blob/master/README.md#rules!!!)
+
 # About the Project
 
   We need a name for the app! Anyway, here's the problem. I use tSheets everyday to track my time for work, and it's great, except it doesn't keep a running total of the hours each week for each job. So I find myself Friday afternoon spending half and hour adding up all the time I worked on each project. Now we have [Project Name Here]! 
@@ -71,7 +73,7 @@ Below will be how to set the app up, build in it, work with github, and future i
    
    We start in `start.js` where we instantiate our `WebApi` class passing in `express()` and our port. We then invoke a public method in the class `api.run()` which will start the server and listen on the port we gave it. 
 
-  From there we move into `application.ts` where we construct the `WebApi` class. Here we first import all of our npm packages and controllers before we get to the class. The class will contain a `constructor(){}` function that will be invoked as soon as the class is instantiated
+  From there we move into `application.ts` where we construct the `WebApi` class. Here we first import all of our npm packages and controllers before we get to the class. The class will contain a `constructor(){}` function that will be invoked as soon as the class is instantiated (essentially it's the first function called). 
    
    ## GUI Repo
    
@@ -92,3 +94,11 @@ Below will be how to set the app up, build in it, work with github, and future i
 # Future Ideas
 
   Stuff!!!
+  
+# RULES!!!
+
+  In order to keep things in order, we need some rules. So,
+  
+  1. If you push directly to master, you'll be off the project - for realsies. It's irresponsible and if your change has bugs in it then those bugs will be in master, and that is not good. All additions will start on their own branch, go through a pull request and review, and will then be merged into master. 
+  
+  2. Only assign yourself to one github issue at a time.
