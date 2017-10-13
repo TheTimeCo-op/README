@@ -22,7 +22,7 @@
 
 [Future Ideas](https://github.com/TheTimeCo-op/README/blob/master/README.md#future-ideas)
 
-[RULES!!!](https://github.com/TheTimeCo-op/README/blob/master/README.md#rules!!!)
+[RULES!!!](https://github.com/TheTimeCo-op/README/blob/master/README.md#rules)
 
 # About the Project
 
@@ -99,6 +99,6 @@ Below will be how to set the app up, build in it, work with github, and future i
 
   In order to keep things in order, we need some rules. So,
   
-  1. If you push directly to master, you'll be off the project - for realsies. It's irresponsible and if your change has bugs in it then those bugs will be in master, and that is not good. All additions will start on their own branch, go through a pull request and review, and will then be merged into master. 
+  1. If you push directly to master, you'll be off the project - for realsies. It's reckless and shows an inattention to detail. Also, if your change has bugs in it then those bugs will be in master, and that is not good. All additions will start on their own branch, go through a pull request and review, and will then be merged into master. 
   
   2. Only assign yourself to one github issue at a time.
