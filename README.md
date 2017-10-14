@@ -105,12 +105,28 @@ Below will be how to set the app up, build in it, work with github, and future i
   2. Then we have our constructor function. This will take in the objects that hold our methods, i.e. `http` for serverCalls, `util` for utilities, `$` for eventHandlers, and `moment` for moment.js - it's best to only pull in what you need. Then in the body of the function we define our variables. So the final function will look like this: 
   ```
     constructor(http, util, $, moment) {
-    this.http = http;
-    this.util = util;
-    this.$ = $;
-    this.moment = moment;
-  }
+      this.http = http;
+      this.util = util;
+      this.$ = $;
+      this.moment = moment;
+    }
   ```
+  
+  3. We then have the render function. This function is pretty basic, it just calls the renderHtml function passing in the html that we want to have displayed on the screen. The render function looks like this:
+  ```
+    render() {
+      this.renderHtml(
+          `<div class='row center-align'></div>
+           <div class="row">
+              <div id="jobs"></div>
+           </div>`
+      )
+    }
+  ```
+  
+  4. Next is the renderHtml function. Again, this function is super simple. It takes in an html string and adds that html to `<div id="main"></div>` unless we're writing a subcomponent, in which case you'll add it to whatever element it needs to be added to. 
+  
+  
 
 # Adding to the js_Library
 
