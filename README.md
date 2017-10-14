@@ -24,6 +24,8 @@
 
 [RULES!!!](https://github.com/TheTimeCo-op/README/blob/master/README.md#rules)
 
+[Notes](https://github.com/TheTimeCo-op/README/blob/master/README.md#notes)
+
 # About the Project
 
   We need a name for the app! Anyway, here's the problem. I use tSheets everyday to track my time for work, and it's great, except it doesn't keep a running total of the hours each week for each job. So I find myself Friday afternoon spending half and hour adding up all the time I worked on each project. Now we have [Project Name Here]! 
@@ -162,15 +164,37 @@ Below will be how to set the app up, build in it, work with github, and future i
 
 # Adding to the js_Library
 
-  Stuff!!!
+  Basically if you find yourself writing something more than once you should probably think about putting it in a function or some exported method. The js_Library is just the place to put that method! This is just a folder that holds all of the helper methods that make developing easier. So, please add to it! 
 
 # Work Flow
 
-  Stuff!!!
+  Here is how the work flow is set up (the steps you'll take):
+  
+  1. After getting aquainted with the project (git clone and stuff), go to the Issues tab in github for whatever repo you want to work on. The issues are labeled on challenge level (1 easy - 5 hard) and have a shortcode to match them up with the corresponding issue in the other repo. For example if you are doing `5478 - Clock in button should clock you in` in the GUI repo then you'll find `5478 - Clock in endpoint should add time to database` in the server repo. That way you can finish the whole process if you want (you don't have to).
+  
+  2. After you've picked an issue, create a branch on github (via the Branch drop down button above the code files on the main page) naming it the something short and descriptive with the github issue number. For example, if `5478 - Clock in endpoint should add time to database` was the 24th issue in github, my branch would be `clock_in_#24` and it should be cut from Master.
+  
+  3. In your terminal/command line and run `git fetch origin` - this will tell you if any changes were made in the repo and will prompt you to `git pull` if so, but it might be safe to `git pull` anyways. 
+  
+  4. Next `git checkout <branch-name>` and this will put you on your new branch and connect it to your remote branch. 
+  
+  5. Do all of your work, and commit when you feel you have a good snapshot of your progress so far (it should be fairly often). When you make a commit PLEASE reference the issue you're working on, for example `git commit -m "Refs #24 blah blah blah"` This will put a reference to that commit in the issue in github so we can easily track changes.
+  
+  6. When you're ready to push run do  `git push origin <branch-name>` 
+  
+  7. Go to github and create a pull request. On the pull request screen verify everything looks good, your code is all there, and the number of commits you have looks good. Next assign me as a reviewer so I can review your code and put a little message in on what you did.
+  
+  8. I'll checkout the code and give you comments and whatnot - as more people get more familiar with the project then they can probably code review. This whole process is just a double checking process to make sure our code base stays clean and bug free.
+  
+  9. While it's pending code review, go back to the issue and make comment describing what you did (it only takes a couple sentences) and if you had to alter any database tables that other people will need to know. Then close the issue. 
+  
+  10. If there are comment that require you to make changes, then just go back to that branch, make your changes, do your commits and pushes as you would normally. Any pushes you make to that branch will go to the pull request as well and can be reviewed by the reviewer. Once the changes are approved, the branch will be merged and then that branch will be deleted. 
 
 # Future Ideas
 
-  Stuff!!!
+  For right now, we just need the app to track time for jobs and display the end time for the day. Simple stuff, but there are a ton of things we can do with it in the future. I really only have one idea currently, but here it is: It would be sweet to create a distributed block chain for each client where you can solidify your time at the end of the day into the block chain and clients can grab that chain and view the amount of time you spent on their project. It would increase the level of transparency, which some clients live for, unfortunately. Once you add the time for the day to the block chain there's no changing it, so no one can argue about the final hours (unless they claim you just sat at your computer doing nothing all day) Basically I want to try building a block chain that doesn't involve money and this could give me a reason to do it. It would be built in python and we would link it to our app via our server.
+
+  Another idea is to host the server and database, create a login/signup/payment system and start finding users. If we decided to monetize it then each person would own a portion of the "company" based on their contributions (I really wish [Colony](https://colony.io/) was available for this reason - 2018 can't come soon enough). If we do decide to go this route then we'll have to sealup electron so you can't open developer tools, create secure login/signup systems, host the server on AWS or DigitalOcean with SSL certificates, and connect it to paypal or Stripe or something similar. We can talk about it 
   
 # RULES!!!
 
@@ -178,4 +202,24 @@ Below will be how to set the app up, build in it, work with github, and future i
   
   1. If you push directly to master, you'll be off the project - for realsies. It's reckless and shows an inattention to detail. Also, if your change has bugs in it then those bugs will be in master, and that is not good. All additions will start on their own branch, go through a pull request and review, and will then be merged into master. 
   
-  2. Only assign yourself to one github issue at a time.
+  2. Only assign yourself to one github issue at a time (or one from each repo). 
+  
+# Notes
+
+  * Make sure you `git fetch origin` and `git pull` often!! At least everyday and before you push. It's best to run into issues on your local machine than when trying to do a pull request. 
+  
+  * If you're writing something twice then turn it into a helper function and put it in the correct place for the repo! 
+
+  * Please follow the established pattern! An organized code base is a thousand times easier to work with than one that has stuff everywhere or where things aren't formatted correctly. So please keep it organized and clear!
+  
+  * do 
+  ```
+  /**
+  *
+  *
+  * @description
+  */
+  ```
+  commands above every function you write to keep things clear and everyone informed.
+  
+  * Always ask questions if you have them! If people really like working on this then we might want to create a slack channel. 
