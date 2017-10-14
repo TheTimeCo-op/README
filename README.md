@@ -1,3 +1,5 @@
+**Note:** If you don't want to read this then at least read [RULES!!!](https://github.com/TheTimeCo-op/README/blob/master/README.md#rules) and [Notes](https://github.com/TheTimeCo-op/README/blob/master/README.md#notes).
+
 # Table of Contents
 
 [About the Project](https://github.com/TheTimeCo-op/README/blob/master/README.md#about-the-application)
@@ -220,6 +222,6 @@ Below will be how to set the app up, build in it, work with github, and future i
   * @description
   */
   ```
-  commands above every function you write to keep things clear and everyone informed.
+  comments above every function you write to keep things clear and everyone informed.
   
   * Always ask questions if you have them! If people really like working on this then we might want to create a slack channel. 
