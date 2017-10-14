@@ -124,9 +124,41 @@ Below will be how to set the app up, build in it, work with github, and future i
     }
   ```
   
-  4. Next is the renderHtml function. Again, this function is super simple. It takes in an html string and adds that html to `<div id="main"></div>` unless we're writing a subcomponent, in which case you'll add it to whatever element it needs to be added to. 
+  4. Next is the renderHtml function. Again, this function is super simple. It takes in an html string and adds that html to `<div id="main"></div>` - unless we're writing a subcomponent, in which case you'll add it to whatever element it needs to be added to. 
   
+  5. Next are the functions needed to set the component up. For example, `JobsComponent` has a get jobs method that will grab all the jobs in the database and render the `JobsCardComponent`, passing in the jobs we got from the database. It'll then add that component to the div with `id="jobs"` that was just rendered in the render function above. Not all components will need a get jobs method (in fact this is probably the only one that does), but basically this is where you put any methods that are necessary to create the component. 
   
+  6. The last method in the class is the listen method. This method will hold all of your event listeners, i.e. all of your click events or any other DOM manipulation function. 
+  
+  7. The rough outline of the component will look like this:
+  
+  ```
+  class SomeComponent {
+   
+    constructor(somePackage){
+      this.somePackage = somePackage
+    }
+    
+    render() {
+      this.renderHtml(
+        //some html
+      )
+    }
+  
+    renderHtml(html){
+      this.$.grabById('main').innerHTML = html //or whatever element you're rendering to
+    }
+    
+    //here we have methods needed to set the component up
+    
+    listen() {
+     //all of our event listeners here
+    }
+    
+  }
+  
+  module.exports = SomeComponent
+  ```
 
 # Adding to the js_Library
 
