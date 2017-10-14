@@ -172,9 +172,9 @@ Below will be how to set the app up, build in it, work with github, and future i
 
   Here is how the work flow is set up (the steps you'll take):
   
-  1. After getting aquainted with the project (git clone and stuff), go to the Issues tab in github for whatever repo you want to work on. The issues are labeled on challenge level (1 easy - 5 hard) and have a shortcode to match them up with the corresponding issue in the other repo. For example if you are doing `5478 - Clock in button should clock you in` in the GUI repo then you'll find `5478 - Clock in endpoint should add time to database` in the server repo. That way you can finish the whole process if you want (you don't have to).
+  1. After getting aquainted with the project (git clone and stuff), go to the Issues tab in github for whatever repo you want to work on. The issues are labeled on challenge level (1 easy - 5 hard) and have a link in the description to match them up with the corresponding issue in the other repo. That way you can finish the whole process if you want (you don't have to).
   
-  2. After you've picked an issue, create a branch on github (via the Branch drop down button above the code files on the main page) naming it the something short and descriptive with the github issue number. For example, if `5478 - Clock in endpoint should add time to database` was the 24th issue in github, my branch would be `clock_in_#24` and it should be cut from Master.
+  2. After you've picked an issue, create a branch on github (via the Branch drop down button above the code files on the main page) naming it the something short and descriptive with the github issue number. For example, if `Clock in endpoint should add time to database` was the 24th issue in github, my branch would be `clock_in_#24` and it should be cut from Master.
   
   3. In your terminal/command line and run `git fetch origin` - this will tell you if any changes were made in the repo and will prompt you to `git pull` if so, but it might be safe to `git pull` anyways. 
   
