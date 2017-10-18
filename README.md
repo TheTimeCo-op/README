@@ -52,12 +52,20 @@ Below will be how to set the app up, build in it, work with github, and future i
    [Install Postgres on Windows](https://www.postgresql.org/download/windows/)
    
    [Install Postgres on Linux](https://www.postgresql.org/download/)
+
+   If you're on a Mac, I'd recommend installing postgresapp which makes turning your server on and off really easy.
+
+   http://postgresapp.com/documentation/install.html
+
+   Install it and then press initialize. Your database should then be up and running!
+
+   (Also if you see the elephant icon in your navbar on your computer then you know your server is on)
     
    For my postgres GUI I prefer pgAdmin. 
 
    [Install pgAdmin](https://www.pgadmin.org/download/)
     
-   I use pgAdmin 3, but I noticed 4 is also up, so it's up to you! 
+   I use pgAdmin 3, but I noticed 4 is also up, so it's up to you!
     
    Once your database is up and running, in the Server repo open `db/schema.sql` in your code editor and copy the contents into pgAdmin - hit the green play button to run the script. You might need to also insert some job names in there as well.
     
